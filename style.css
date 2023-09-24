@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background: green;
+}
+
+.start_btn,
+.info_box,
+.quiz_box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-100%, -100%);
+  transition: all 0.3s ease;
+}
+
+.start_btn {
+  transform: translate(-50%, -50%) !important;
+}
+
+.quiz_box {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.activeInfo,
+.activeQuiz {
+  display: flex;
+  opacity: 1 !important;
+  z-index: 5;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+  pointer-events: all !important;
+}
+
+.start_btn button {
+  font-size: 25px;
+  font-weight: 500;
+  color: #fff;
+  padding: 15px 30px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background: red;
+  cursor: pointer;
+}
+
+.info_box {
+  opacity: 0;
+  pointer-events: none;
+  width: 540px;
+  background: #fff;
+  border-radius: 5px;
+}
+.info_box.info_title {
+  height: 55px;
+  width: 100%;
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  align-items: center;
+  padding: 0 35px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.info_box .info_list {
+  padding: 15px 35px;
+}
+.info_box .info_list .info {
+  margin: 4px 0;
+  font-size: 15px;
+}
+.info_box .info_list .info span {
+  font-weight: 600;
+  color: #007bff;
+}
+
+.info_box .buttons {
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 35px;
+  border-top: 1px solid lightgray;
+}
+
+.info_box .buttons button {
+  margin: 0 4px;
+  height: 35px;
+  width: 95px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid #007bff;
+  transition: all 0.3 s ease;
+}
+.buttons button.restart {
+  color: white;
+  background: red;
+}
+.buttons button.restart:hover {
+  background: whitesmoke;
+}
+/*.platform{
+  background: #fff;
+  width: 95%;
+  max-width: 700px;
+  margin: 100px auto 0;
+  border-radius: 10px;
+  padding: 25px;
+}
+.platform h1{
+    font-size: 20px;
+    color: #43004d;
+    font-weight: 700;
+    border-bottom: 1px solid #333;
+    padding-bottom: 25px;
+}*/
+.quiz_box {
+  background: #fff;
+  width: 95%;
+  max-width: 700px;
+  border-radius: 10px;
+  padding: 25px;
+  transform: translate(-50%, -50%) scale(0.9);
+  pointer-events: none;
+  transition: all 0.3 s ease;
+}
+.quiz_box h1 {
+  position: relative;
+  z-index: 2;
+  height: 70px;
+  padding: 0 30px;
+  background: #fff;
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.quiz_box h1 .title {
+  font-size: 25px;
+  font-weight: 700;
+}
+.quiz_box header .timer {
+  color: #004085;
+  background: #cce5ff;
+  border: 1px solid #b8daff;
+  height: 45px;
+  padding: 0 8px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 145px;
+}
+.quiz_box header .timer .time_left_txt {
+  font-weight: 400;
+  font-size: 17px;
+  user-select: none;
+}
+.quiz_box header .timer .timer_sec {
+  font-size: 18px;
+  font-weight: 550;
+  height: 30px;
+  width: 45px;
+  color: #fff;
+  border-radius: 5px;
+  line-height: 30px;
+  text-align: center;
+  background: #343a40;
+  border: 1px solid #343a40;
+  user-select: none;
+}
+
+.btn {
+  background: #fff;
+  color: #222;
+  font-weight: 500;
+  width: 100%;
+  border: 1px solid #222;
+  padding: 10px;
+  margin: 10px 0;
+  text-align: left;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn:hover:not([disabled]) {
+  background: #222;
+  color: #fff;
+}
+.btn:disabled {
+  cursor: no-drop;
+}
+#next-btn {
+  background: #4d2700;
+  color: #fff;
+  font-weight: 500;
+  width: 150px;
+  border: 0;
+  padding: 10px;
+  margin: 20px auto 0;
+  border-radius: 4px;
+  cursor: pointer;
+  display: none;
+}
+#next-btn.show {
+  display: block;
+}
+.correct {
+  background: #9aeabc;
+}
+.wrong {
+  background: #ff9393;
+}
