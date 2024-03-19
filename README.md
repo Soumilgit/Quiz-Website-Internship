@@ -1,4 +1,4 @@
-# congenial-spoon
+# Quiz-Website
 Repository for a  frontend-only quiz website project ,with motivation from YouTube.
 Works fine,except a little problem while rendering the file:
 Want a little help from you guys,
